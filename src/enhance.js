@@ -21,7 +21,8 @@
 
     // Back link
     const backLink = document.getElementById('back-link');
-    if (backLink) {
+    if (backLink && backLink.getAttribute('href') === '#') {
+      // Only intercept when using in-page navigation (href="#")
       backLink.addEventListener('click', function(e) {
         e.preventDefault();
         entryScreen.classList.remove('fade-out');
