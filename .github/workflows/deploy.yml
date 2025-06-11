@@ -1,29 +1,11 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to Cloudflare Pages (disabled)
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
+# Cloudflare deployment temporarily disabled.
 jobs:
   deploy:
+    if: false  # prevent execution
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - run: npm ci
-      - run: npm run build
-
-      - uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: hidden-places
-          directory: ./dist 
+    steps: [] 
