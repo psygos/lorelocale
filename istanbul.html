@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istanbul · Unflattened</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        :root {
+            --accent: #8b4513;
+        }
+        body {
+            font-family: 'Georgia', monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Entry Screen -->
+    <div id="entry-screen">
+        <div class="entry-content">
+            <h1>Istanbul</h1>
+            <p>where continents collide in secret</p>
+            <button id="enter-btn">enter quietly</button>
+        </div>
+    </div>
+
+    <!-- Map Screen -->
+    <div id="map-screen">
+        <a href="index.html" id="back-link">← other cities</a>
+        <div id="time"></div>
+
+        <div class="marker marker-square" style="top:20%;left:70%" data-place="blok" data-label="BLOK Art Space"></div>
+<div class="marker marker-ring" style="top:80%;left:80%" data-place="mehmet" data-label="Mehmet Karslı Workshop"></div>
+<button class="marker marker-text" style="top:30%;left:35%" data-place="valide" data-label="Büyük Valide Han Rooftop">find Mr. Mehdi</button>
+<div class="marker marker-cross" style="top:35%;left:60%" data-place="pixie" data-label="Pixie Underground"></div>
+<div class="marker marker-ring" style="top:45%;left:40%" data-place="crafted" data-label="Crafted in Istanbul"></div>
+<button class="marker marker-text" style="top:55%;left:25%" data-place="walters" data-label="Walter's Coffee">breaking bad</button>
+<div class="marker marker-line" style="top:55%;left:55%" data-place="postane" data-label="Postane Istanbul"></div>
+<div class="marker marker-dot" style="top:15%;left:20%" data-place="arboretum" data-label="Atatürk Arboretum"></div>
+<button class="marker marker-text" style="top:25%;left:80%" data-place="pose" data-label="Poşe Artist Run Space">find the door</button>
+<div class="marker marker-cross" style="top:65%;left:30%" data-place="karga" data-label="Karga Bar"></div>
+<div class="marker marker-cross" style="top:35%;left:20%" data-place="minimuzikhol" data-label="MiniMuzikhol"></div>
+<div class="marker marker-ring" style="top:50%;left:70%" data-place="caferaga" data-label="Caferağa Medresesi"></div>
+<div class="marker marker-ring" style="top:15%;left:65%" data-place="datu" data-label="DATU Natural Dye Lab"></div>
+<button class="marker marker-text" style="top:70%;left:50%" data-place="popup" data-label="Pop-Up Restaurant Istanbul">facebook only</button>
+<div class="marker marker-cross" style="top:40%;left:15%" data-place="siran" data-label="Sirän Collective"></div>
+<div class="marker marker-square" style="top:60%;left:70%" data-place="depo" data-label="Depo Istanbul"></div>
+        <div class="fragment" style="top:10%;left:10%" data-fragment="1">"find mr. mehdi<br>for the rooftop"</div>
+<div class="fragment" style="top:79%;left:17%" data-fragment="2">"german techniques<br>turkish soul"</div>
+<div class="fragment" style="top:42%;left:26%" data-fragment="3">"200 masters then<br>few remain now"</div>
+<div class="fragment" style="top:84%;left:72%" data-fragment="4">"test tubes serve<br>turkish coffee"</div>
+<div class="fragment" style="top:20%;left:40%" data-fragment="5">"5 floors hide<br>5 different tribes"</div>
+<div class="fragment" style="top:35%;left:45%" data-fragment="6">"dance floors become<br>autonomous zones"</div>
+        <div id="legend">natural escapes<br>art havens<br>experimental spaces<br>preservation efforts<br>underground culture<br>insider required<br></div>
+    </div>
+
+    
+<div class="fragment-expanded" id="fragment-1">
+  <button class="fragment-close">×</button>
+  <p>Büyük Valide Han hides Istanbul's most spectacular secret view. The 16th-century building requires finding Mr. Mehdi who controls access. Climb unmarked stairs with extreme caution—unprotected edges everywhere. Recent structural damage restricted entry. Artists with studios inside maintain the relationships that grant access.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-2">
+  <button class="fragment-close">×</button>
+  <p>Mehmet Karslı preserves bookbinding fusion born from tragedy. WWII Jewish refugees fleeing Hitler brought German binding techniques to Turkey. They taught local craftsmen, creating unique tradition. Mehmet, last master of this school, binds books with methods that exist nowhere else—accidental cultural preservation.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-3">
+  <button class="fragment-close">×</button>
+  <p>Crafted in Istanbul documents vanishing workshops. Glassworker Selahattin Usta remembers when Paşabahçe factory employed 200 masters. Now scattered workshops struggle alone. ITU students map these spaces before silence. Each dot on their map represents generations of knowledge on extinction's edge.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-4">
+  <button class="fragment-close">×</button>
+  <p>Walter's Coffee shouldn't work but does. Breaking Bad laboratory in Kadıköy where chemistry meets Turkish hospitality. Coffee in beakers, desserts in petri dishes. Young Istanbul embraces the absurdity—American TV obsession filtered through local cafe culture creates genuinely unique experience.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-5">
+  <button class="fragment-close">×</button>
+  <p>Karga Bar layers subcultures in 1900s Haydarpaşa workers' building. Unmarked door on Kadife Sokak opens to vertical journey. Gothic lounges with tattooed intellectuals, performance spaces, each floor its own world. Monthly magazine 'Kargamecmua' documents underground culture mainstream ignores. Named for crows gathering on roof.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-6">
+  <button class="fragment-close">×</button>
+  <p>Sirän Collective creates temporary freedom through electronic music. Y.unan and Nene H's female-led collective shares locations only through trusted networks. In restrictive environment, underground parties become survival strategy. The secrecy protects community. Music carries messages that cannot be spoken elsewhere.</p>
+</div>
+    
+<div class="place-card" id="card-blok">
+  <button class="place-close">×</button>
+  <div class="place-type">hidden gallery</div>
+  <h3 class="place-name">BLOK Art Space</h3>
+  <p class="place-soul">antique dealer's contemporary art revolution</p>
+  <p class="place-story">Hikmet Mizanoğlu transformed his antique obsession into contemporary art sanctuary. Two locations: visible Çukurcuma gallery and secret room inside 17th-century Büyük Valide Han. Navigate Ottoman corridors past textile workshops to find installations.</p>
+<p class="place-story">The han rooftop offers city's most spectacular secret view but demands extreme caution. Locals access through artist relationships, not tourist information. Recent structural damage restricted access—insider knowledge essential.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://yabangee.com/blok-art-space/" target="_blank">Yabangee feature</a></div><div><a href="https://www.dailysabah.com/arts-culture/2017/11/06/sculpting-the-unseen-sahand-hesamiyan-at-blok-art-space" target="_blank">Daily Sabah review</a></div></div>
+  <p class="place-details">Çukurcuma & Büyük Valide Han • Appointment preferred • Find Mr. Mehdi for roof</p>
+</div>
+
+<div class="place-card" id="card-mehmet">
+  <button class="place-close">×</button>
+  <div class="place-type">last master</div>
+  <h3 class="place-name">Mehmet Karslı Workshop</h3>
+  <p class="place-soul">german bookbinding meets turkish tradition</p>
+  <p class="place-story">Last master of 'German School' bookbinding. Learned from WWII refugee craftsmen who brought European techniques to Turkey. His workshop represents Istanbul's tradition—Turkish mücellit fused with German precision.</p>
+<p class="place-story">Born from historical necessity: Jewish craftsmen fleeing Hitler found refuge in Turkey, teaching their skills to locals. Mehmet preserves this accidental cultural fusion, binding books with techniques that would otherwise vanish.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.lavarla.com/mehmet-karsli/" target="_blank">Lavarla interview</a></div><div><a href="https://www.gazeteilksayfa.com/ankaranin-tek-mucelliti-24621h.htm" target="_blank">Gazeteilksayfa profile</a></div></div>
+  <p class="place-details">Ankara (for Istanbul tradition) • Appointment only • Cash payment</p>
+</div>
+
+<div class="place-card" id="card-valide">
+  <button class="place-close">×</button>
+  <div class="place-type">secret vista</div>
+  <h3 class="place-name">Büyük Valide Han Rooftop</h3>
+  <p class="place-soul">istanbul's most dangerous perfect view</p>
+  <p class="place-story">16th-century han hides city's most spectacular panorama. Find Mr. Mehdi who controls access. Climb unmarked stairs. Exercise extreme caution—unprotected edges everywhere. Traditional domes, Golden Horn, historic peninsula spread below.</p>
+<p class="place-story">Structural damage recently restricted access. Artists with studios inside maintain relationships with rooftop gatekeepers. The danger adds to mystique—this isn't sanitized tourism but raw urban exploration.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.thewildlifediaries.com/istanbul-hidden-gems-and-underrated-sites/" target="_blank">The Wildlife Diaries</a></div><div><a href="https://www.agos.com.tr/tr/yazi/16297/icinde-gokyuzulu-bir-istanbul-saklayan-buyuk-valide-han" target="_blank">Agos article</a></div></div>
+  <p class="place-details">Tahtakale area • Find gatekeeper first • Extreme caution required</p>
+</div>
+
+<div class="place-card" id="card-pixie">
+  <button class="place-close">×</button>
+  <div class="place-type">bass sanctuary</div>
+  <h3 class="place-name">Pixie Underground</h3>
+  <p class="place-soul">where dubstep found turkish home</p>
+  <p class="place-story">Since 2008, Özgür aka Madcow anchors Istanbul's bass music scene. Tucked on quiet alley off İstiklal. Istanbul's only club dedicated to dubstep, jungle, drum & bass. 18-inch subwoofers deliver authentic underground experience.</p>
+<p class="place-story">Everyone comes together like one family around bass frequencies. The unmarked entrance filters tourists. Those who find it discover Turkey's electronic music underground—not imported culture but locally evolved community.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.timeout.com/istanbul/clubs/pixie-underground" target="_blank">Time Out Istanbul</a></div><div><a href="https://www.theravereport.com/blog/istanbul" target="_blank">Rave Report feature</a></div></div>
+  <p class="place-details">Off İstiklal Caddesi • Unmarked door • Cash only</p>
+</div>
+
+<div class="place-card" id="card-crafted">
+  <button class="place-close">×</button>
+  <div class="place-type">vanishing workshops</div>
+  <h3 class="place-name">Crafted in Istanbul</h3>
+  <p class="place-soul">documenting masters before silence</p>
+  <p class="place-story">ITU students Bilal Yılmaz, Barış Gümüştaş, Seda Erdural document 99+ workshops before disappearance. Glassworker Selahattin Usta: 'Before Paşabahçe factory closed, 200 masters worked together. Now only few remain.'</p>
+<p class="place-story">Each workshop tells migration story—Armenian jewelers, Greek woodworkers, Kurdish weavers. The project preserves techniques and narratives. Maps guide visitors but relationships unlock real knowledge.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.craftedinistanbul.com/en/" target="_blank">Crafted in Istanbul</a></div><div><a href="https://sosyaltasarimplatformu.com/crafted-in-istanbul/" target="_blank">Sosyal Tasarım Platformu</a></div></div>
+  <p class="place-details">Various neighborhoods • Check website map • Respect working hours</p>
+</div>
+
+<div class="place-card" id="card-walters">
+  <button class="place-close">×</button>
+  <div class="place-type">chemistry cafe</div>
+  <h3 class="place-name">Walter's Coffee</h3>
+  <p class="place-soul">test tubes meet turkish tea culture</p>
+  <p class="place-story">World's first Breaking Bad-themed cafe in Kadıköy. Complete chemistry lab design. Drinks served in test tubes and beakers. Instagram-worthy but genuinely creative—attracts locals seeking experiences beyond standard cafe culture.</p>
+<p class="place-story">The concept shouldn't work but does. Turkish hospitality meets American TV obsession. Young Istanbulites embrace the absurdity. Coffee chemistry becomes social experiment in cultural fusion.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.lezzet.com.tr/lezzetten-haberler/istanbul-konsept-kafeler" target="_blank">Lezzet concept cafes</a></div></div>
+  <p class="place-details">Kadıköy • Instagram: @walterscoffee • Expect queues weekends</p>
+</div>
+
+<div class="place-card" id="card-postane">
+  <button class="place-close">×</button>
+  <div class="place-type">social enterprise</div>
+  <h3 class="place-name">Postane Istanbul</h3>
+  <p class="place-soul">zero-waste dining meets community activism</p>
+  <p class="place-story">Bak Postacı initiative transformed historic post office. Cafe, marketplace, rooftop edible garden. Zero-waste kitchen, fair trade cooperatives, composting systems. Dining advances environmental and social justice simultaneously.</p>
+<p class="place-story">Not just restaurant but movement. Local producers, marginalized communities, sustainable practices converge. The building's postal history continues—now delivering hope instead of letters.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://bantmag.com/postane-istanbul/" target="_blank">Bant Mag profile</a></div></div>
+  <p class="place-details">Historic post office building • Open daily • Support cooperatives</p>
+</div>
+
+<div class="place-card" id="card-arboretum">
+  <button class="place-close">×</button>
+  <div class="place-type">botanical refuge</div>
+  <h3 class="place-name">Atatürk Arboretum</h3>
+  <p class="place-soul">296 hectares where istanbul breathes</p>
+  <p class="place-story">Over 2,000 plant species in Sarıyer. Weekend picnic favorite for residents. Rhododendron Valley explodes in spring. Liquidambar Forest transforms autumn. Natural spaces requiring timing and local knowledge.</p>
+<p class="place-story">Scientists preserve biodiversity while families seek green refuge. The balance between research and recreation creates unique atmosphere—serious botany meets Sunday relaxation.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.thewildlifediaries.com/istanbul-hidden-gems-and-underrated-sites/" target="_blank">The Wildlife Diaries guide</a></div></div>
+  <p class="place-details">Sarıyer district • Weekdays quieter • Seasonal highlights vary</p>
+</div>
+
+<div class="place-card" id="card-pose">
+  <button class="place-close">×</button>
+  <div class="place-type">queer sanctuary</div>
+  <h3 class="place-name">Poşe Artist Run Space</h3>
+  <p class="place-soul">where censorship meets resistance</p>
+  <p class="place-story">Larissa Araz opened independent queer art space 2018. Bereketzade backstreets. Tuesday-Saturday 13:00-19:00. Finding requires insider knowledge. Recent exhibitions like 'A Finger for an Eye' tackle visibility with boldness.</p>
+<p class="place-story">The difficulty finding it protects community. Those who search discover Istanbul's LGBTQ+ creative resistance. Art becomes activism becomes survival becomes celebration.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.pose-hello.com/" target="_blank">Poşe website</a></div><div><a href="https://www.protocinema.org/exhibitions/a-finger-for-an-eye" target="_blank">Protocinema listing</a></div></div>
+  <p class="place-details">Bereketzade, Beyoğlu • Tue-Sat 13-19 • Instagram: @pose_hello</p>
+</div>
+
+<div class="place-card" id="card-karga">
+  <button class="place-close">×</button>
+  <div class="place-type">cultural layers</div>
+  <h3 class="place-name">Karga Bar</h3>
+  <p class="place-soul">5 floors of alternative istanbul</p>
+  <p class="place-story">1900s building for Haydarpaşa workers transformed into cultural hive. Unmarked door on Kadife Sokak. Each floor different atmosphere—Gothic fireplace lounges, tattooed intellectuals, KargART performances. Publishing monthly 'Kargamecmua.'</p>
+<p class="place-story">Named after crows that gather on roof. The building layers subcultures like geological strata. Discover new tribe each floor. The magazine documents underground culture mainstream media ignores.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.weloveist.com/listing/karga" target="_blank">We Love Istanbul</a></div><div><a href="https://www.timeout.com/istanbul/bars-and-pubs/karga" target="_blank">Time Out review</a></div></div>
+  <p class="place-details">Kadife Sokak, Moda • Find unmarked door • Each floor different</p>
+</div>
+
+<div class="place-card" id="card-minimuzikhol">
+  <button class="place-close">×</button>
+  <div class="place-type">intimate electronics</div>
+  <h3 class="place-name">MiniMuzikhol</h3>
+  <p class="place-soul">istanbul's electronic music birthplace</p>
+  <p class="place-story">Since 1995, oldest underground club. Barış K founded this 'mini music hall' in Cihangir. 150-person capacity maintains intimacy. Focus on important over commercial. Authentic community around music discovery.</p>
+<p class="place-story">The size limitation creates magic. Everyone knows everyone. International DJs play here for love not money. Cihangir's bohemian heart beats through speakers.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.minimuzikhol.club/" target="_blank">MiniMuzikhol website</a></div><div><a href="https://www.soundvibemag.com/city-vibes/minimuzikhol-istanbul/" target="_blank">Soundvibe Mag</a></div></div>
+  <p class="place-details">Cihangir • 150 capacity • Advance tickets recommended</p>
+</div>
+
+<div class="place-card" id="card-caferaga">
+  <button class="place-close">×</button>
+  <div class="place-type">living tradition</div>
+  <h3 class="place-name">Caferağa Medresesi</h3>
+  <p class="place-soul">where masters still teach disciples</p>
+  <p class="place-story">Mimar Sinan built 1559. Traditional master-apprentice system continues—ebru, calligraphy, miniature painting. Unlike tourist craft shops, authentic learning relationships. Knowledge transfers through years not weekends.</p>
+<p class="place-story">Students commit to masters not courses. The building breathes with concentration. Tourists photograph exterior while inside, centuries-old techniques pass to new hands. Real preservation happens through practice.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://guideofistanbul.net/traditional-handicrafts/" target="_blank">Historical Istanbul Guide</a></div></div>
+  <p class="place-details">Sultanahmet area • Observe classes respectfully • Long-term learning only</p>
+</div>
+
+<div class="place-card" id="card-datu">
+  <button class="place-close">×</button>
+  <div class="place-type">color archaeology</div>
+  <h3 class="place-name">DATU Natural Dye Lab</h3>
+  <p class="place-soul">652 plants preserving ottoman rainbows</p>
+  <p class="place-story">Turkish Cultural Foundation's laboratory houses world's richest natural dye collection. 652 plants and pigments that powered centuries of textile artistry. UNESCO-recognized facility documents before knowledge vanishes.</p>
+<p class="place-story">Scientists reverse-engineer historical textiles. Which root created that specific red? How did Ottomans achieve impossible purples? Each sample preserves chemistry and culture simultaneously.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="http://www.ayasligroup.com/en/organizations/turkish-cultural-foundation" target="_blank">Ayaslı Group TCF</a></div></div>
+  <p class="place-details">By appointment only • Research purposes • Academic connections help</p>
+</div>
+
+<div class="place-card" id="card-popup">
+  <button class="place-close">×</button>
+  <div class="place-type">secret suppers</div>
+  <h3 class="place-name">Pop-Up Restaurant Istanbul</h3>
+  <p class="place-soul">intimate dinners in private homes</p>
+  <p class="place-story">Singapore-Dutch expat Kay launched 2013. Themed nights—Thai, Italian, Korean—in private settings. Book through Facebook, word-of-mouth networks. The secrecy protects intimacy. Strangers become friends over authentic regional cuisines.</p>
+<p class="place-story">Professional chefs cook family recipes. Diners share long tables. No restaurant overhead means quality ingredients. The temporary nature makes each dinner precious. Miss one, wait months for return.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.dailysabah.com/life/2015/02/21/popup-restaurant-istanbul-dishes-up-worldly-fare" target="_blank">Daily Sabah article</a></div><div><a href="https://www.facebook.com/popupdinners.istanbul/" target="_blank">Facebook page</a></div></div>
+  <p class="place-details">Private homes • Facebook booking • Limited seats</p>
+</div>
+
+<div class="place-card" id="card-siran">
+  <button class="place-close">×</button>
+  <div class="place-type">queer underground</div>
+  <h3 class="place-name">Sirän Collective</h3>
+  <p class="place-soul">electronic music as survival strategy</p>
+  <p class="place-story">Y.unan and Nene H create safe spaces through underground electronic events. Female-led collective operates through community networks not public promotion. Vital cultural lifeline in restrictive environment.</p>
+<p class="place-story">Location and timing shared only through trusted networks. The secrecy ensures safety. Dance floors become temporary autonomous zones. Music carries messages mainstream media cannot.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://mixmag.net/read/istanbul-underground-queer-techno-scene-new-documentary-movement-news" target="_blank">Mixmag documentary</a></div><div><a href="https://djmag.com/news/new-documentary-movement-spotlights-istanbuls-underground-club-scene-watch" target="_blank">DJ Mag feature</a></div></div>
+  <p class="place-details">Community access only • Safety through discretion • Trust required</p>
+</div>
+
+<div class="place-card" id="card-depo">
+  <button class="place-close">×</button>
+  <div class="place-type">critical space</div>
+  <h3 class="place-name">Depo Istanbul</h3>
+  <p class="place-soul">tobacco warehouse turned thought laboratory</p>
+  <p class="place-story">Former tobacco warehouse in Tophane. 4-story space for critical cultural debate. Tuesday-Saturday 11am-7pm, free admission. Collaborative projects between Turkey, Caucasus, Middle East, Balkans. Istanbul as cultural crossroads.</p>
+<p class="place-story">The location matters—Tophane gentrifies rapidly. Depo provides space for conversations about displacement, identity, resistance. Art becomes tool for understanding transformations. Free entry ensures accessibility.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.artrabbit.com/organisations/depo" target="_blank">ArtRabbit listing</a></div><div><a href="https://exhibist.com/non-profit-art-spaces/" target="_blank">Exhibist guide</a></div></div>
+  <p class="place-details">Tophane • Tue-Sat 11-19 • Free admission</p>
+</div>
+
+    <script src="enhance.js"></script>
+</body>
+</html>

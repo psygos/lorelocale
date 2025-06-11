@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singapore · Unflattened</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        :root {
+            --accent: #ff6b6b;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Entry Screen -->
+    <div id="entry-screen">
+        <div class="entry-content">
+            <h1>Singapore</h1>
+            <p>beyond the efficient</p>
+            <button id="enter-btn">enter quietly</button>
+        </div>
+    </div>
+
+    <!-- Map Screen -->
+    <div id="map-screen">
+        <a href="index.html" id="back-link">← other cities</a>
+        <div id="time"></div>
+
+        <div class="marker marker-square" style="top:15%;left:75%" data-place="kampong" data-label="Kampong Lorong Buangkok"></div>
+<div class="marker marker-line" style="top:45%;left:55%" data-place="ella" data-label="ELLA at MRT Stations"></div>
+<div class="marker marker-line" style="top:35%;left:45%" data-place="ratio" data-label="Ratio Robotic Café"></div>
+<div class="marker marker-cross" style="top:50%;left:40%" data-place="synthesis" data-label="Synthesis TCM Speakeasy"></div>
+<button class="marker marker-text" style="top:40%;left:30%" data-place="mama" data-label="Mama Diam">provision shop</button>
+<div class="marker marker-ring" style="top:70%;left:20%" data-place="sengchew" data-label="Seng Chew Quarry"></div>
+<div class="marker marker-dot" style="top:25%;left:35%" data-place="rail" data-label="Rail Corridor North"></div>
+<button class="marker marker-text" style="top:85%;left:60%" data-place="lazarus" data-label="Lazarus Island Beach">ferry + walk</button>
+<div class="marker marker-square" style="top:20%;left:60%" data-place="starch" data-label="starch"></div>
+<div class="marker marker-cross" style="top:65%;left:45%" data-place="islands" data-label="I_S_L_A_N_D_S"></div>
+<button class="marker marker-text" style="top:55%;left:30%" data-place="graffiti" data-label="Kampong Gelam Hall of Fame">legal walls</button>
+<div class="marker marker-ring" style="top:80%;left:80%" data-place="lamppost" data-label="Tuas Lamp Post 1"></div>
+<div class="marker marker-dot" style="top:60%;left:70%" data-place="keppel" data-label="Keppel Hill Reservoir"></div>
+<button class="marker marker-text" style="top:30%;left:85%" data-place="seletar" data-label="Boh Geh Uncle Canteen">no photos</button>
+<div class="marker marker-line" style="top:75%;left:35%" data-place="marina-one" data-label="Marina One Ground Floor"></div>
+<div class="marker marker-square" style="top:45%;left:70%" data-place="funan" data-label="Funan Mall Rooftop"></div>
+<button class="marker marker-text" style="top:10%;left:50%" data-place="tampines" data-label="Our Tampines Hub">24/7</button>
+        <div class="fragment" style="top:10%;left:10%" data-fragment="1">"chickens have names<br>rent hasn't changed"</div>
+<div class="fragment" style="top:79%;left:17%" data-fragment="2">"robots remember<br>your coffee order"</div>
+<div class="fragment" style="top:69%;left:67%" data-fragment="3">"push the medicine drawer<br>find the cocktails"</div>
+<div class="fragment" style="top:84%;left:72%" data-fragment="4">"art in the basement<br>between phone shops"</div>
+<div class="fragment" style="top:47%;left:81%" data-fragment="5">"quarry water heals<br>locals believe"</div>
+<div class="fragment" style="top:62%;left:86%" data-fragment="6">"cyclists know<br>the sticker spot"</div>
+        <div id="legend">natural secrets<br>cultural havens<br>future experiences<br>deep discoveries<br>hidden doors<br>access hints<br></div>
+    </div>
+
+    
+<div class="fragment-expanded" id="fragment-1">
+  <button class="fragment-close">×</button>
+  <p>Kampong Lorong Buangkok survives on private land. Miss Sng maintains 26 wooden houses where chickens roam free. Ah Liang the rooster greets visitors. Monthly rent: $10. The village floods during storms—locals call it "Selak Kain" (lift your sarong). Development plans exist but implementation keeps getting delayed.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-2">
+  <button class="fragment-close">×</button>
+  <p>ELLA operates at 30+ MRT stations, making 200 cups hourly. Her facial recognition remembers regular orders. The transparent OLED screen shows your drink being crafted by the six-axis arm. Office workers discovered her through late-night installations. She never judges your 3am coffee needs.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-3">
+  <button class="fragment-close">×</button>
+  <p>Synthesis hides behind a real TCM shop in Suntec. Slide open the medicine drawer marked with a small logo. Walk through the neon corridor mimicking Hong Kong alleys. The bartenders infuse actual TCM herbs into cocktails. Opened 2023, still under 500 Instagram posts.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-4">
+  <button class="fragment-close">×</button>
+  <p>I_S_L_A_N_D_S deliberately chose shopping mall basements to reach non-art crowds. First Peninsula, now Excelsior. Founded by an exhibitions exec and skate shop owner exploring "alternative dimensions and the occult." The Instagram stays under 1000 followers by design.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-5">
+  <button class="fragment-close">×</button>
+  <p>Seng Chew Quarry filled with rainwater after closing in 1960. Exit Bukit Gombak MRT, walk past sports hall, climb the grassy slope, follow the storm drain. Locals claim the emerald water has healing properties. Scientists can't explain why. Believe what you want.</p>
+</div>
+
+<div class="fragment-expanded" id="fragment-6">
+  <button class="fragment-close">×</button>
+  <p>Tuas Lamp Post 1—the only legal graffiti spot for stickers in Singapore since 2021. Love Cycling Singapore members make pilgrimages to add their club stickers. Located at the end of Tuas West Drive. Security knows. They let it happen.</p>
+</div>
+    
+<div class="place-card" id="card-kampong">
+  <button class="place-close">×</button>
+  <div class="place-type">last village</div>
+  <h3 class="place-name">Kampong Lorong Buangkok</h3>
+  <p class="place-soul">singapore's final traditional village</p>
+  <p class="place-story">26 families in wooden houses with zinc roofs. Monthly rent: $10. Chickens roam dirt paths. Miss Sng, the village chief, inherited the land from her father who bought it in 1956. She refuses million-dollar offers: "I promised my father."</p>
+<p class="place-story">Free-roaming chickens have names. Rambutan trees drop fruit for sharing. During floods, everyone lifts their sarongs—hence "Kampong Selak Kain." Recent TikToks brought attention but residents remain welcoming. This is home, not heritage.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://mothership.sg/" target="_blank">Mothership feature</a></div></div>
+  <p class="place-details">Access via authorized guides • Respect living community • Accept rambutans if offered</p>
+</div>
+
+<div class="place-card" id="card-ella">
+  <button class="place-close">×</button>
+  <div class="place-type">robot barista</div>
+  <h3 class="place-name">ELLA at MRT Stations</h3>
+  <p class="place-soul">24/7 coffee without judgment</p>
+  <p class="place-story">Six-axis robotic arm with transparent OLED screen. Makes 200 cups hourly using premium Italian beans. Facial recognition remembers your usual. Started at Crown Coffee CT Hub 2, now at 30+ MRT stations.</p>
+<p class="place-story">Discovered by office workers during late installations. ELLA operates through your darkest hours—3am existential crisis coffee tastes the same as 9am productivity fuel. No small talk required.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.vice.com" target="_blank">VICE feature</a></div></div>
+  <p class="place-details">Various MRT stations • 24/7 operation • App ordering available</p>
+</div>
+
+<div class="place-card" id="card-ratio">
+  <button class="place-close">×</button>
+  <div class="place-type">tech lounge</div>
+  <h3 class="place-name">Ratio Robotic Café</h3>
+  <p class="place-soul">where robots make $1 coffee and judge-free cocktails</p>
+  <p class="place-story">Three robot "Ratiologists" create 60+ drinks. Coffee shop by day, cocktail lounge by night. The robotic arms perform latte art while you watch through glass panels. All-day happy hour: $1 Kopi-O, $2 beer.</p>
+<p class="place-story">Locals discovered it seeking tech novelty without premium prices. The robots don't care if you order five coffees or switch to cocktails at 3 pm. Consistency meets affordability meets spectacle.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://mothership.sg" target="_blank">Mothership $1 coffee</a></div></div>
+  <p class="place-details">Centrepoint & ION Orchard • Transform at 5pm • Happy hour all day</p>
+</div>
+
+<div class="place-card" id="card-synthesis">
+  <button class="place-close">×</button>
+  <div class="place-type">hidden door</div>
+  <h3 class="place-name">Synthesis TCM Speakeasy</h3>
+  <p class="place-soul">medicine shop facade hides neon hong kong vibes</p>
+  <p class="place-story">Enter through real TCM shop in Suntec City. Find the medicine drawer with small logo. Slide it open. Walk through neon-lit corridor mimicking Hong Kong alleys. TCM-inspired cocktails like Goji Roni await.</p>
+<p class="place-story">Opened 2023 with minimal promotion. Under 500 Instagram posts keep insider feel. The fake shopfront fooled mall-goers for months. Now those who know guide friends through the drawer.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://hungrygowhere.com" target="_blank">HungryGoWhere review</a></div></div>
+  <p class="place-details">Suntec City Tower 1 #02-605 • Look for TCM shop • Drawer has logo</p>
+</div>
+
+<div class="place-card" id="card-mama">
+  <button class="place-close">×</button>
+  <div class="place-type">nostalgia trap</div>
+  <h3 class="place-name">Mama Diam</h3>
+  <p class="place-soul">1980s provision shop hiding modern singaporean soul</p>
+  <p class="place-story">Push aside the magazine rack in the fake provision shop. Find modern dining space serving nostalgic Singapore flavors. Cold Truffle Mien ($25) became legendary through TikTok whispers.</p>
+<p class="place-story">Lou Shang Nostalgic Delights upstairs. The entrance mimicry is perfect—actual aunties tried buying soap. Discovery requires physical presence; no amount of Instagram scrolling reveals the entrance.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://www.tatlerasia.com" target="_blank">Tatler Asia feature</a></div></div>
+  <p class="place-details">Prinsep Street • Push magazine stand • Trust the process</p>
+</div>
+
+<div class="place-card" id="card-sengchew">
+  <button class="place-close">×</button>
+  <div class="place-type">secret water</div>
+  <h3 class="place-name">Seng Chew Quarry</h3>
+  <p class="place-soul">abandoned quarry locals claim heals</p>
+  <p class="place-story">Former granite quarry (1949-1960) filled with rainwater. Exit Bukit Gombak MRT Exit D, walk past sports hall, climb grassy slope, follow storm drain two minutes. Completely undeveloped.</p>
+<p class="place-story">Locals believe the emerald water has "magical healing properties." No scientific basis but belief persists. Non-slip shoes mandatory. Mosquito repellent essential. The unmarked trail keeps crowds away.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://historybyeisen.com" target="_blank">History By Eisen blog</a></div></div>
+  <p class="place-details">Behind Blk 383 Bukit Batok West Ave 5 • Storm drain path • Believe what you want</p>
+</div>
+
+<div class="place-card" id="card-rail">
+  <button class="place-close">×</button>
+  <div class="place-type">forgotten path</div>
+  <h3 class="place-name">Rail Corridor North</h3>
+  <p class="place-soul">2.2km through singapore's wilderness spine</p>
+  <p class="place-story">The northern section features riverside trail through tall reeds. Dawn visits create fog effects tourists miss. Clementi Forest section: 85 ha with muddy trails and man-made waterfall.</p>
+<p class="place-story">Locals layer running routes with nature photography. The main trail gets crowded; extensions stay empty. Former railway transformed into 24 km green corridor. Each section has personality.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://ostrichtrails.com" target="_blank">Ostrich Trails guide</a></div></div>
+  <p class="place-details">Multiple entry points • Dawn for mist • Clementi Forest for solitude</p>
+</div>
+
+<div class="place-card" id="card-lazarus">
+  <button class="place-close">×</button>
+  <div class="place-type">effort reward</div>
+  <h3 class="place-name">Lazarus Island Beach</h3>
+  <p class="place-soul">singapore's best sand requires two boats</p>
+  <p class="place-story">Ferry from Marina South Pier to St John's Island. Walk across causeway to Lazarus. Find C-shaped lagoon with whitest sand in Singapore. No facilities ensures weekday desertion.</p>
+<p class="place-story">The two-step journey filters crowds. Those who make the effort find private beach experience. Bring everything—no shops, no shelter. The inconvenience is the feature.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://planetware.com" target="_blank">PlanetWare ranking</a></div></div>
+  <p class="place-details">Marina South Pier ferry • Then walk to Lazarus • Weekdays empty</p>
+</div>
+
+<div class="place-card" id="card-starch">
+  <button class="place-close">×</button>
+  <div class="place-type">art energy</div>
+  <h3 class="place-name">starch</h3>
+  <p class="place-soul">industrial space where artists get full autonomy</p>
+  <p class="place-story">Former industrial complex on Tagore Lane. 5.63-meter ceilings, mezzanine space. Founded by artist Moses Tan, December 2020. Named after energy-giving carbohydrate—meant to energize art scene.</p>
+<p class="place-story">Full calendar months per project. Complete artist autonomy. Word-of-mouth discovery over mainstream promotion. Passionate small followings through Instagram @starch.sg.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://pluralartmag.com" target="_blank">Plural Art Mag interview</a></div></div>
+  <p class="place-details">5 Tagore Lane • Check @starch.sg • Small audiences preferred</p>
+</div>
+
+<div class="place-card" id="card-islands">
+  <button class="place-close">×</button>
+  <div class="place-type">basement culture</div>
+  <h3 class="place-name">I_S_L_A_N_D_S</h3>
+  <p class="place-soul">art for people who don't visit galleries</p>
+  <p class="place-story">Started in Peninsula Shopping Centre basement, now Excelsior. Deliberately targets non-art audiences. Founded by exhibitions exec + skate shop owner. Explores "alternative dimensions and the occult."</p>
+<p class="place-story">Originally eight window cases in shopping center corridors. Now small shopfront. Instagram @islands.peninsula keeps under 1000 followers intentionally. Discovery through wandering, not algorithms.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://timeout.com" target="_blank">Time Out feature</a></div></div>
+  <p class="place-details">Excelsior Shopping Centre basement • Between phone repair shops • Free entry</p>
+</div>
+
+<div class="place-card" id="card-graffiti">
+  <button class="place-close">×</button>
+  <div class="place-type">legal walls</div>
+  <h3 class="place-name">Kampong Gelam Hall of Fame</h3>
+  <p class="place-soul">southeast asia's first sanctioned graffiti zone</p>
+  <p class="place-story">230-meter stretch launched April 2024. 17 Singapore artists featured. QR codes explain each work. Legal graffiti space—rare transformation of underground culture to sanctioned expression.</p>
+<p class="place-story">Maintains street credibility despite official status. Artists rotate. Community self-polices quality. The legalization preserves rather than sanitizes the art form.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://sgmagazine.com" target="_blank">SG Magazine opening</a></div></div>
+  <p class="place-details">Kampong Gelam area • QR codes for info • Respect the art</p>
+</div>
+
+<div class="place-card" id="card-lamppost">
+  <button class="place-close">×</button>
+  <div class="place-type">pilgrim site</div>
+  <h3 class="place-name">Tuas Lamp Post 1</h3>
+  <p class="place-soul">only legal sticker spot in singapore</p>
+  <p class="place-story">End of Tuas West Drive. Single lamp post where stickers are legal since 2021. Love Cycling Singapore forums spread the word. Covered in cycling club stickers—each a pilgrimage marker.</p>
+<p class="place-story">Security knows and allows it. Cyclists make special trips just to add their sticker. The legality makes it more special, not less. Community self-regulates what goes up.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://lovecycling.sg" target="_blank">Love Cycling SG threads</a></div></div>
+  <p class="place-details">End of Tuas West Drive • Bring your sticker • Cyclists' secret</p>
+</div>
+
+<div class="place-card" id="card-keppel">
+  <button class="place-close">×</button>
+  <div class="place-type">lost & found</div>
+  <h3 class="place-name">Keppel Hill Reservoir</h3>
+  <p class="place-soul">vanished 60 years, rediscovered by ghost hunters</p>
+  <p class="place-story">Disappeared from maps until 2005. Paranormal investigators found it searching for Japanese tomb. National Heritage Board "rediscovered" in 2014. One-third Olympic pool-sized, served docks from 1905.</p>
+<p class="place-story">Access through Joaquim Garden & Landscape sign. Trek through muddy vegetation. Find diving board remnants. The forgetting and finding adds to mystique. Urban explorers' prize.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://remembersingapore.org" target="_blank">Remember Singapore blog</a></div></div>
+  <p class="place-details">Via Morse Road • Through garden center • Muddy path warning</p>
+</div>
+
+<div class="place-card" id="card-seletar">
+  <button class="place-close">×</button>
+  <div class="place-type">time capsule</div>
+  <h3 class="place-name">Boh Geh Uncle Canteen</h3>
+  <p class="place-soul">three stalls under tarp since 1960s</p>
+  <p class="place-story">Former Seletar Camp. Three stalls under DIY tarp—cai png, Muslim food, drinks by "Boh Geh Uncle" himself. Rickety tables, mismatched stools. Strict no photos policy.</p>
+<p class="place-story">Prices reflect late 1960s when it started. Forums describe as "cyclists and joggers know." The uncle remembers everyone's usual. Cash only. Time stopped here and nobody minds.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://forums.cycling.com" target="_blank">Cycling forum tips</a></div></div>
+  <p class="place-details">Former Seletar Camp area • No photos allowed • 1960s prices</p>
+</div>
+
+<div class="place-card" id="card-marina-one">
+  <button class="place-close">×</button>
+  <div class="place-type">urban hack</div>
+  <h3 class="place-name">Marina One Ground Floor</h3>
+  <p class="place-soul">free gym with skyline breeze</p>
+  <p class="place-story">Open-air concept with tables, chairs, greenery. No power outlets but perfect for bodyweight exercises. Pleasant breeze reduces humidity. Locals layer activities—workout, lunch, work.</p>
+<p class="place-story">Discovered by fitness groups seeking free spaces. The architecture creates natural cooling. Security doesn't mind respectful use. Urban efficiency through local knowledge.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://fitnessforums.sg" target="_blank">Fitness forum posts</a></div></div>
+  <p class="place-details">Marina One complex • Ground floor open area • Natural ventilation</p>
+</div>
+
+<div class="place-card" id="card-funan">
+  <button class="place-close">×</button>
+  <div class="place-type">rooftop escape</div>
+  <h3 class="place-name">Funan Mall Rooftop</h3>
+  <p class="place-soul">marina bay views without tourist prices</p>
+  <p class="place-story">Rooftop garden with stunning skyline views. Lobby B lift provides access. Perfect for outdoor yoga or calisthenics. Fraction of Marina Bay Sands prices—actually free.</p>
+<p class="place-story">Locals use for sunset workouts. The elevation provides breeze. Tourist-free because guidebooks miss it. Architecture magazines praised design; locals just use it.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://archblog.com" target="_blank">Architecture blog</a></div></div>
+  <p class="place-details">Funan Mall • Lobby B lift to roof • Best at sunset</p>
+</div>
+
+<div class="place-card" id="card-tampines">
+  <button class="place-close">×</button>
+  <div class="place-type">always open</div>
+  <h3 class="place-name">Our Tampines Hub</h3>
+  <p class="place-soul">24/7 community space that never judges</p>
+  <p class="place-story">Operates round the clock. Picnic-style tables perfect for group fitness planning, late-night study, early morning gathering. True 24/7—not "closes at 2am" fake 24/7.</p>
+<p class="place-story">Represents Singapore's evolution toward perpetual urban living. Night shift workers, students, insomniacs all find space. Community center that actually centers community anytime.</p>
+  <div class="place-source"><strong>sources:</strong><br><div><a href="https://seeksophie.com" target="_blank">Seek Sophie guide</a></div></div>
+  <p class="place-details">1 Tampines Walk • Actually 24/7 • All welcome</p>
+</div>
+
+    <script src="enhance.js"></script>
+</body>
+</html>
