@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lorelocale</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Simple white–grey map container */
+        body {
+            background: linear-gradient(135deg, #faf9f7 0%, #f4f1ec 100%);
+            margin: 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        #map-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: #2a2a2a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        #map-container {
+            position: relative;
+            height: auto;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+        
+        #world-map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #world-map svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .city-marker {
+            display: none;
+        }
+        
+        /* Hover effects for city pins */
+        #world-map a circle {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        #world-map a:hover circle {
+            fill: #8b7355;
+            r: 0.8;
+            stroke-width: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <div id="map-wrapper">
+        <div class="logo">
+            <h1>lorelocale</h1>
+            <p>places beyond their top 10 list</p>
+        </div>
+        <div id="map-container">
+            <div id="world-map">{{map_svg}}</div>
+        </div>
+    </div>
+</body>
+</html>

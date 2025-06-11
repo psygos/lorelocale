@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        :root {
+            --accent: {{accent_color}};
+        }
+        body {
+            font-family: '{{font_family}}', monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Entry Screen -->
+    <div id="entry-screen">
+        <div class="entry-content">
+            <h1>{{city_name}}</h1>
+            <p>{{city_tagline}}</p>
+            <button id="enter-btn">enter quietly</button>
+        </div>
+    </div>
+
+    <!-- Map Screen -->
+    <div id="map-screen">
+        <a href="index.html" id="back-link">← other cities</a>
+        <div id="time"></div>
+
+        {{markers_html}}
+        {{fragments_html}}
+        <div id="legend">{{legend_html}}</div>
+    </div>
+
+    {{fragment_cards_html}}
+    {{place_cards_html}}
+
+    <script src="enhance.js"></script>
+</body>
+</html>
