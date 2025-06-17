@@ -15,19 +15,11 @@
     </style>
 </head>
 <body>
-    <!-- Entry Screen -->
-    <div id="entry-screen">
-        <div class="entry-content">
-            <h1>Singapore</h1>
-            <p>beyond the efficient</p>
-            <button id="enter-btn">enter quietly</button>
-        </div>
-    </div>
-
     <!-- Map Screen -->
-    <div id="map-screen">
-        <a href="./" id="back-link">← other cities</a>
+    <div id="map-screen" class="active">
+        <a href="index.html" id="back-link">← other cities</a>
         <div id="time"></div>
+        <a href="singapore-editions.html" id="edition-link">edition: 00</a>
 
         <div class="marker marker-square" style="top:15%;left:75%" data-place="kampong" data-label="Kampong Lorong Buangkok"></div>
 <div class="marker marker-line" style="top:45%;left:55%" data-place="ella" data-label="ELLA at MRT Stations"></div>
@@ -52,7 +44,7 @@
 <div class="fragment" style="top:84%;left:72%" data-fragment="4">"art in the basement<br>between phone shops"</div>
 <div class="fragment" style="top:47%;left:81%" data-fragment="5">"quarry water heals<br>locals believe"</div>
 <div class="fragment" style="top:62%;left:86%" data-fragment="6">"cyclists know<br>the sticker spot"</div>
-        <div id="legend">natural secrets<br>cultural havens<br>future experiences<br>deep discoveries<br>hidden doors<br>access hints<br></div>
+        <div id="legend"><div class="legend-item"><span class="marker marker-dot legend-icon"></span><span>natural secrets</span></div><div class="legend-item"><span class="marker marker-square legend-icon"></span><span>cultural havens</span></div><div class="legend-item"><span class="marker marker-line legend-icon"></span><span>future experiences</span></div><div class="legend-item"><span class="marker marker-ring legend-icon"></span><span>deep discoveries</span></div><div class="legend-item"><span class="marker marker-cross legend-icon"></span><span>hidden doors</span></div><div class="legend-item"><span class="marker marker-text legend-icon">T</span><span>access hints</span></div></div>
     </div>
 
     

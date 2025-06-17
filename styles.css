@@ -90,6 +90,22 @@ body {
   opacity: 0.5;
 }
 
+/* Edition link */
+#edition-link {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-decoration: none;
+  color: #666;
+}
+#edition-link:hover {
+  opacity: 1;
+  color: #2a2a2a;
+}
+
 /* Legend */
 #legend {
   position: fixed;
@@ -98,7 +114,24 @@ body {
   font-size: 0.7rem;
   opacity: 0.6;
   text-align: right;
-  line-height: 1.8;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.legend-icon.marker {
+  transform: none !important;
+  position: static !important;
+  display: inline-block;
+  scale: 0.9;
 }
 
 /* Markers base */

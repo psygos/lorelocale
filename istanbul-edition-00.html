@@ -15,19 +15,11 @@
     </style>
 </head>
 <body>
-    <!-- Entry Screen -->
-    <div id="entry-screen">
-        <div class="entry-content">
-            <h1>Istanbul</h1>
-            <p>where continents collide in secret</p>
-            <button id="enter-btn">enter quietly</button>
-        </div>
-    </div>
-
     <!-- Map Screen -->
-    <div id="map-screen">
-        <a href="./" id="back-link">← other cities</a>
+    <div id="map-screen" class="active">
+        <a href="index.html" id="back-link">← other cities</a>
         <div id="time"></div>
+        <a href="istanbul-editions.html" id="edition-link">edition: 00</a>
 
         <div class="marker marker-square" style="top:20%;left:70%" data-place="blok" data-label="BLOK Art Space"></div>
 <div class="marker marker-ring" style="top:80%;left:80%" data-place="mehmet" data-label="Mehmet Karslı Workshop"></div>
@@ -51,7 +43,7 @@
 <div class="fragment" style="top:84%;left:72%" data-fragment="4">"test tubes serve<br>turkish coffee"</div>
 <div class="fragment" style="top:20%;left:40%" data-fragment="5">"5 floors hide<br>5 different tribes"</div>
 <div class="fragment" style="top:35%;left:45%" data-fragment="6">"dance floors become<br>autonomous zones"</div>
-        <div id="legend">natural escapes<br>art havens<br>experimental spaces<br>preservation efforts<br>underground culture<br>insider required<br></div>
+        <div id="legend"><div class="legend-item"><span class="marker marker-dot legend-icon"></span><span>natural escapes</span></div><div class="legend-item"><span class="marker marker-square legend-icon"></span><span>art havens</span></div><div class="legend-item"><span class="marker marker-line legend-icon"></span><span>experimental spaces</span></div><div class="legend-item"><span class="marker marker-ring legend-icon"></span><span>preservation efforts</span></div><div class="legend-item"><span class="marker marker-cross legend-icon"></span><span>underground culture</span></div><div class="legend-item"><span class="marker marker-text legend-icon">T</span><span>insider required</span></div></div>
     </div>
 
     
