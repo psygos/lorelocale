@@ -15,19 +15,11 @@
     </style>
 </head>
 <body>
-    <!-- Entry Screen -->
-    <div id="entry-screen">
-        <div class="entry-content">
-            <h1>{{city_name}}</h1>
-            <p>{{city_tagline}}</p>
-            <button id="enter-btn">enter quietly</button>
-        </div>
-    </div>
-
     <!-- Map Screen -->
-    <div id="map-screen">
-        <a href="./" id="back-link">← other cities</a>
+    <div id="map-screen" class="active">
+        <a href="index.html" id="back-link">← other cities</a>
         <div id="time"></div>
+        <a href="{{edition_select_url}}" id="edition-link">edition: {{edition_padded}}</a>
 
         {{markers_html}}
         {{fragments_html}}

@@ -1,0 +1,341 @@
+{
+  "city": {
+    "name": "San Francisco",
+    "tagline": "where weird survives through community",
+    "latitude": 37.7749,
+    "longitude": -122.4194
+  },
+  "style": {
+    "accentColor": "#ff8c00",
+    "font": "Helvetica Neue"
+  },
+  "legend": {
+    "dot": "urban nature",
+    "square": "art collectives",
+    "line": "experimental dining",
+    "ring": "craft preservation",
+    "cross": "underground music",
+    "text": "community anchor"
+  },
+  "places": [
+    {
+      "id": "ctrlshft",
+      "name": "CTRL+SHFT Collective",
+      "type": "women's warehouse",
+      "soul": "12 women artists reclaiming space from patriarchy",
+      "stories": [
+        "3,300-square-foot West Oakland warehouse collectively managed by 12 women artists, mostly CCA MFA graduates. Former Shotgun Players set-building site transformed into studios plus three-room gallery. Monthly rotating exhibitions, panels, film screenings.",
+        "Created specifically for women, queer, and non-binary artists since 2015. Consensus-based organizing with community programming. The space exists because these artists were tired of male-dominated art world gatekeeping."
+      ],
+      "sources": [
+        { "title": "Wikipedia entry", "url": "https://en.wikipedia.org/wiki/CTRL+SHFT" },
+        { "title": "KQED feature", "url": "https://www.kqed.org/arts/13790714/west-oakland-collective-ctrlshft-carves-out-space-for-underrepresented-artists" }
+      ],
+      "details": "Chester & 34th Streets, Oakland • Monthly events • Consensus-based",
+      "marker": "square",
+      "topPercent": 15,
+      "leftPercent": 75
+    },
+    {
+      "id": "fallout",
+      "name": "Fallout SF",
+      "type": "punk basement",
+      "soul": "winston smith's studio reborn as underground gallery",
+      "stories": [
+        "50-A Bannam Place, tucked in Grant Avenue alley. Former studio of legendary punk artist Winston Smith for 13 years. Founded 2024 by Farida Mazlan and Craig Vincent. 30+ punk and underground artists.",
+        "Friday-Sunday 1-8pm. Monthly exhibitions, music shows, workshops. Deliberate embrace of punk's anti-commercial aesthetic. North Beach needs spaces like this to remain culturally relevant."
+      ],
+      "sources": [
+        { "title": "Hoodline report", "url": "https://hoodline.com/2022/07/new-punk-and-underground-art-space-opens-in-north-beach/" }
+      ],
+      "details": "50-A Bannam Place • Fri-Sun 1-8pm • Find the alley",
+      "marker": "square",
+      "topPercent": 25,
+      "leftPercent": 40
+    },
+    {
+      "id": "arion",
+      "name": "Arion Press",
+      "type": "living museum",
+      "markerLabel": "hot metal type",
+      "soul": "last unified letterpress operation in america",
+      "stories": [
+        "Fort Mason. Only printer in America creating books entirely by hand under one roof. Operating country's last unified hot-metal type foundry, letterpress workshop, and bindery. Machines cast U.N. Charter in 1945.",
+        "Only paid apprenticeship program nationwide in letterpress printing, hand bookbinding, typecasting. Books sell for thousands but the real value is preserving 500 years of printing knowledge."
+      ],
+      "sources": [
+        { "title": "Arion Press website", "url": "https://arionpress.com/" },
+        { "title": "SF Design Week", "url": "https://sfdesignweek.org/bay-area-made-exhibit-workspaces/arion-press/" }
+      ],
+      "details": "Fort Mason Center • Tours available • Apprenticeships offered",
+      "marker": "text",
+      "topPercent": 30,
+      "leftPercent": 25
+    },
+    {
+      "id": "ames",
+      "name": "Rebel Neon",
+      "type": "neon resistance",
+      "soul": "fighting led invasion one bent tube at a time",
+      "stories": [
+        "Ames Palms works from Bayview warehouse as SF's last true neon artist. BFA from Alfred University, 20+ years bending. Restored Castro Theatre marquee for 'Milk' premiere 2008. Created pieces for de Young's Ed Hardy exhibit.",
+        "'Neon belongs in our future' drives her mission. Training next generation of benders in increasingly LED-dominated world. The gas discharge creates warmth no LED can replicate."
+      ],
+      "sources": [
+        { "title": "Rebel Neon site", "url": "https://www.rebelneon.com/" },
+        { "title": "SF Gate article", "url": "https://www.sfgate.com/local/article/san-francisco-neon-signs-comeback-17520447.php" }
+      ],
+      "details": "Bayview warehouse • Classes available • Commission work",
+      "marker": "ring",
+      "topPercent": 70,
+      "leftPercent": 60
+    },
+    {
+      "id": "hidden",
+      "name": "Hidden Garden Steps",
+      "type": "mosaic ascent",
+      "soul": "148 steps of community-created beauty",
+      "stories": [
+        "Between Kirkham and Lawton streets. 148 mosaic-tiled steps with intricate designs across nine themed sections. Monthly community cleanups every second Saturday. Volunteer-driven project exemplifying overlooked urban beauty.",
+        "Neighbors created this without city permission initially. Now it's beloved landmark. Each tile placed by community hands. The gardens alongside maintained by residents who adopted plots."
+      ],
+      "sources": [
+        { "title": "SF Tourism Tips", "url": "https://www.sftourismtips.com/hidden-garden-steps.html" },
+        { "title": "SF Gate feature", "url": "https://www.sfgate.com/local/article/hidden-garden-steps-18108794.php" }
+      ],
+      "details": "16th Ave & Kirkham • Second Saturday cleanups • Free always",
+      "marker": "dot",
+      "topPercent": 50,
+      "leftPercent": 15
+    },
+    {
+      "id": "forage",
+      "name": "ForageSF",
+      "type": "urban harvest",
+      "markerLabel": "mushroom tours",
+      "soul": "teaching the city is bigger than they think",
+      "stories": [
+        "Iso Rabins conducts mushroom foraging tours and seaweed collection classes throughout city parks and coastal areas. Bay Area's first urban foraging education organization, operating over a decade.",
+        "Maintains discretion about locations to preserve ecological balance. 'The world is bigger than they think' philosophy. Teaching residents to see food everywhere—even in Golden Gate Park."
+      ],
+      "sources": [
+        { "title": "ForageSF website", "url": "https://www.foragesf.com" },
+        { "title": "KQED story", "url": "https://www.kqed.org/news/10443966/foraging-for-wild-foods-in-the-bay-area" }
+      ],
+      "details": "Various locations • Small groups only • Book ahead",
+      "marker": "text",
+      "topPercent": 35,
+      "leftPercent": 30
+    },
+    {
+      "id": "mezli",
+      "name": "Mezli",
+      "type": "robot kitchen",
+      "soul": "fully autonomous mediterranean in shipping container",
+      "stories": [
+        "Spark Social Food Park. Fully autonomous robotic restaurant in shipping container format. Mediterranean grain bowls with no on-site workers except daily ingredient loading. Pure technological food experiment.",
+        "The uncanny valley of dining—perfect consistency, zero human interaction. Represents SF's willingness to prototype the future, even if that future lacks soul. At least it's affordable."
+      ],
+      "sources": [
+        { "title": "Chain Store Age", "url": "https://chainstoreage.com/restaurant-run-robots-open-sf-plans-nationwide-expansion" }
+      ],
+      "details": "Spark Social • No staff present • Order via app",
+      "marker": "line",
+      "topPercent": 45,
+      "leftPercent": 50
+    },
+    {
+      "id": "oldskool",
+      "name": "Old Skool Cafe",
+      "type": "youth sanctuary",
+      "soul": "violence prevention through soul food and jazz",
+      "stories": [
+        "Bayview cafe combining 1920s speakeasy aesthetics with job training for at-risk youth 16-22. Faith-based violence prevention program. Soul food with live jazz nightly. Comprehensive wraparound services.",
+        "The waitstaff are the mission—formerly system-involved youth learning hospitality, life skills, conflict resolution. Every meal supports transformation. The jazz creates healing atmosphere."
+      ],
+      "sources": [
+        { "title": "Old Skool Cafe", "url": "https://www.oldskoolcafe.org/" }
+      ],
+      "details": "1429 Mendell St • Wed-Sat dinner • Reservations recommended",
+      "marker": "line",
+      "topPercent": 65,
+      "leftPercent": 70
+    },
+    {
+      "id": "mission",
+      "name": "Mission Cultural Center",
+      "type": "displacement fight",
+      "markerLabel": "since 1977",
+      "soul": "latino arts anchor facing its own gentrification",
+      "stories": [
+        "2868 Mission Street since 1977. National Register of Historic Places 2020. Currently facing displacement due to $24 million building renovations. Pays $1/year rent to city but can't find affordable temporary space.",
+        "Anchor for Chicano, Central American, South American, Caribbean traditions. The irony—cultural center that fought gentrification for decades now displaced by it. Community organizing continues."
+      ],
+      "sources": [
+        { "title": "NPS listing", "url": "https://www.nps.gov/places/mission-cultural-center.htm" },
+        { "title": "Mission Local", "url": "https://missionlocal.org/2024/04/mission-cultural-center-may-face-cuts-budget-woes-ahead-of-relocation/" }
+      ],
+      "details": "2868 Mission St • Fighting displacement • Support needed",
+      "marker": "text",
+      "topPercent": 40,
+      "leftPercent": 35
+    },
+    {
+      "id": "bottom",
+      "name": "Bottom of the Hill",
+      "type": "survivor venue",
+      "soul": "where '90s bands watch their kids perform",
+      "stories": [
+        "1233 17th Street, Potrero Hill. Dave Benetti since 1991, Kathleen Owen current owner. Survived 2009 all-ages venue crackdown when neighbors wrote support letters calling it 'integral part of neighborhood.'",
+        "Rolling Stone: 'best place to hear live music in San Francisco.' Generational now—bands from '90s watch their children perform. The venue that launched thousand careers still launching them."
+      ],
+      "sources": [
+        { "title": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bottom_of_the_Hill" },
+        { "title": "SF Gate profile", "url": "https://www.sfgate.com/sf-culture/article/Bottom-of-the-Hill-music-venue-Potrero-Hill-change-15083400.php" }
+      ],
+      "details": "1233 17th St • 7 nights/week • All ages with adult",
+      "marker": "cross",
+      "topPercent": 55,
+      "leftPercent": 55
+    },
+    {
+      "id": "underground",
+      "name": "Underground SF",
+      "type": "electronic home",
+      "soul": "longest-running drum and bass night in the city",
+      "stories": [
+        "424 Haight Street. 'Shelter Tuesdays'—SF's longest-running drum and bass night. Hosting UK acts like Ed Rush & Optical, Loxy. Recently expanded with Bassline Coffee serving community 7am-1pm weekdays.",
+        "The venue adapted—electronic music at night, coffee by day. Serving the neighborhood 24/7 in different ways. The bass frequencies embedded in the walls activate with each show."
+      ],
+      "sources": [
+        { "title": "Underground SF", "url": "https://undergroundsf.com/" }
+      ],
+      "details": "424 Haight St • Shelter Tuesdays • Coffee mornings",
+      "marker": "cross",
+      "topPercent": 38,
+      "leftPercent": 42
+    },
+    {
+      "id": "bookbinders",
+      "name": "American Bookbinders Museum",
+      "type": "craft temple",
+      "soul": "north america's only bookbinding museum",
+      "stories": [
+        "355 Clementina Street. Opened 2015 by Bay Area bookbinder Tim James. North America's only bookbinding museum. Functioning 19th-century equipment. Monthly workshops teaching traditional folding and sewing.",
+        "Preserving knowledge from 1600s hand processes through 19th-century mechanization. In city obsessed with disruption, this museum preserves continuity. Each book a meditation on permanence."
+      ],
+      "sources": [
+        { "title": "Wikipedia", "url": "https://en.wikipedia.org/wiki/American_Bookbinders_Museum" },
+        { "title": "Museum website", "url": "https://bookbindersmuseum.org/" }
+      ],
+      "details": "355 Clementina St • Tours available • Workshops monthly",
+      "marker": "ring",
+      "topPercent": 48,
+      "leftPercent": 47
+    },
+    {
+      "id": "meda",
+      "name": "MEDA Small Sites",
+      "type": "housing defense",
+      "soul": "buying buildings to stop latino displacement",
+      "stories": [
+        "Mission Economic Development Agency purchases 4-25 unit buildings preserving rent-controlled housing for Latino families. Pipeline: 1,159 homes, 100,000 sq ft affordable commercial space.",
+        "Working to reverse displacement of 8,000 Latinos (25% of community) lost since 2000. Community-driven anti-gentrification through property ownership. Fighting fire with fire."
+      ],
+      "sources": [
+        { "title": "MEDA article", "url": "https://medasf.org/qa-fighting-gentrification-and-displacement-via-san-franciscos-small-sites-program/" }
+      ],
+      "details": "Mission district focus • Community-driven • Real preservation",
+      "marker": "ring",
+      "topPercent": 42,
+      "leftPercent": 38
+    },
+    {
+      "id": "casa",
+      "name": "California Academy of Studio Arts",
+      "type": "free experiment",
+      "markerLabel": "former SFAI",
+      "soul": "laurene powell jobs reviving black mountain college",
+      "stories": [
+        "Former SF Art Institute campus. $30 million investment by Jobs through BMA-Institute. Free, unaccredited program for 30 emerging artists annually. Black Mountain College experimental education model.",
+        "Emphasizing artist development over commercial success. Restoring public access to Diego Rivera mural. In campus that trained generations, new experiment begins. Tuition: $0. Value: priceless."
+      ],
+      "sources": [
+        { "title": "Archpaper report", "url": "https://www.archpaper.com/2025/06/former-san-francisco-art-institute-campus-renovation/" },
+        { "title": "Hyperallergic", "url": "https://hyperallergic.com/1018336/san-francisco-art-institute-becomes-free-experimental-studio-program/" }
+      ],
+      "details": "800 Chestnut St • Opening 2025 • Free admission",
+      "marker": "text",
+      "topPercent": 22,
+      "leftPercent": 32
+    },
+    {
+      "id": "battery",
+      "name": "The Battery",
+      "type": "elite commons",
+      "soul": "58,000 sq ft proving exclusivity can serve community",
+      "stories": [
+        "Former marble factory. $2,800/year membership, 5,000+ members including Warriors players. 'Battery Powered' philanthropy raised $31 million for 240 nonprofits. Four bars, restaurant, spa, library, garden.",
+        "The contradiction—exclusive space generating inclusive impact. Tech elite building community through selective admission. At least they're funding nonprofits while networking."
+      ],
+      "sources": [
+        { "title": "SF Standard", "url": "https://sfstandard.com/2022/12/23/exclusive-sf-club-warriors-partied-at-thrives/" },
+        { "title": "Robb Report", "url": "https://robbreport.com/travel/destinations/slideshow/inside-worlds-most-exclusive-members-only-clubs/the-battery-san-francisco/" }
+      ],
+      "details": "717 Battery St • Members only • $2,800/year",
+      "marker": "line",
+      "topPercent": 28,
+      "leftPercent": 45
+    },
+    {
+      "id": "midway",
+      "name": "The Midway",
+      "type": "creative campus",
+      "soul": "40,000 sq ft celebrating confluence over competition",
+      "stories": [
+        "Dogpatch hub celebrating 'confluence of music, art, cutting-edge technology, culinary arts.' Public lunch service Monday-Friday 10am-3pm. Performances, workshops, exhibits focused on experiential learning.",
+        "Former industrial space transformed into creative campus. The scale allows multiple communities to coexist. Tech funding supporting arts without dominating them. Rare balance."
+      ],
+      "sources": [
+        { "title": "The Midway", "url": "https://themidwaysf.com/" }
+      ],
+      "details": "900 Marin St • Public lunch M-F • Events vary",
+      "marker": "square",
+      "topPercent": 62,
+      "leftPercent": 58
+    }
+  ],
+  "fragments": [
+    {
+      "id": "1",
+      "short": "\"12 women artists\nreclaim the warehouse\"",
+      "long": "CTRL+SHFT Collective operates on consensus in West Oakland. Twelve women, mostly CCA MFA graduates, transformed a former set-building warehouse into studios and galleries. Monthly exhibitions focus on women, queer, and non-binary artists. They were tired of male-dominated gatekeeping, so they built their own gates."
+    },
+    {
+      "id": "2",
+      "short": "\"winston smith's studio\nlives as punk gallery\"",
+      "long": "Fallout SF occupies legendary punk artist Winston Smith's former basement studio for 13 years. Hidden in North Beach alley, 30+ underground artists show work Friday-Sunday. The anti-commercial aesthetic remains pure—no wine and cheese openings here. Punk's not dead, it just moved underground."
+    },
+    {
+      "id": "3",
+      "short": "\"last hot metal type\nin all america\"",
+      "long": "Arion Press at Fort Mason operates America's only unified hot-metal type foundry, letterpress workshop, and bindery under one roof. Their machines cast the U.N. Charter in 1945. They run the only paid apprenticeship program nationwide. Books sell for thousands, but the real value is 500 years of preserved knowledge."
+    },
+    {
+      "id": "4",
+      "short": "\"mushrooms hide\nin golden gate park\"",
+      "long": "ForageSF teaches urban dwellers 'the world is bigger than they think.' Iso Rabins leads mushroom tours through city parks, seaweed collection on coasts. Locations stay secret to preserve balance. After a decade, they've shown thousands that food grows everywhere—even downtown."
+    },
+    {
+      "id": "5",
+      "short": "\"violence prevention\nthrough soul food\"",
+      "long": "Old Skool Cafe in Bayview serves more than dinner. At-risk youth 16-22 learn hospitality while serving soul food with live jazz. The 1920s speakeasy aesthetic masks serious mission—every waiter is escaping street life. Faith-based violence prevention never tasted so good."
+    },
+    {
+      "id": "6",
+      "short": "\"buying buildings\nto save culture\"",
+      "long": "MEDA fights gentrification by purchasing it. Small Sites Program buys 4-25 unit buildings, preserving rent control for Latino families. 8,000 Latinos displaced since 2000—25% of Mission community. Their pipeline includes 1,159 homes. Fighting market forces with market tools."
+    }
+  ],
+  "credits": []
+}

@@ -30,6 +30,7 @@ fs.mkdirSync(DIST_DIR, { recursive: true });
 
 const indexTemplate = fs.readFileSync(path.join(TEMPLATE_DIR, 'index.html'), 'utf8');
 const cityTemplate = fs.readFileSync(path.join(TEMPLATE_DIR, 'city.html'), 'utf8');
+const editionsTemplate = fs.readFileSync(path.join(TEMPLATE_DIR, 'editions.html'), 'utf8');
 
 // Helper: render simple {{key}} placeholders (no loops)
 function simpleRender(template, data) {
@@ -40,26 +41,41 @@ function simpleRender(template, data) {
   });
 }
 
-// Read city list; if cities.json not present, infer from files
-let citySlugs = [];
-const dirSlugs = fs
-  .readdirSync(DATA_DIR)
-  .filter((f) => f.endsWith('.json') && f !== 'cities.json')
-  .map((f) => path.basename(f, '.json'));
+// ---- Data layout normalisation -------------------------------------------
+// We enforce: each city has its own directory, and edition files are numbered
+//   data/<city>/<n>.json  (edition n)
+// Any legacy file of the form data/<city>.json (excluding cities.json) is
+// migrated automatically into data/<city>/0.json on first build.
 
-const citiesJsonPath = path.join(DATA_DIR, 'cities.json');
-let fileSlugs = [];
-if (fs.existsSync(citiesJsonPath) && fs.readFileSync(citiesJsonPath, 'utf8').trim().length) {
-  try {
-    const list = JSON.parse(fs.readFileSync(citiesJsonPath, 'utf8'));
-    fileSlugs = list.map((c) => c.slug);
-  } catch (err) {
-    console.warn('⚠️  Unable to parse cities.json, falling back to directory scanning');
+fs.readdirSync(DATA_DIR).forEach((entry) => {
+  if (entry.endsWith('.json') && entry !== 'cities.json') {
+    const slug = path.basename(entry, '.json');
+    const dirPath = path.join(DATA_DIR, slug);
+    const srcPath = path.join(DATA_DIR, entry);
+    // Create directory if needed
+    if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath);
+    const destPath = path.join(dirPath, '0.json');
+    if (!fs.existsSync(destPath)) {
+      fs.renameSync(srcPath, destPath);
+    } else {
+      // Destination already exists; remove the legacy file to avoid confusion
+      fs.unlinkSync(srcPath);
+    }
   }
-}
+});
 
-citySlugs = Array.from(new Set([...dirSlugs, ...fileSlugs]));
-// Optionally, write a fresh cities.json so the UI can list cities elsewhere
+// Gather city slugs: now directories only.
+let citySlugs = [];
+fs.readdirSync(DATA_DIR).forEach((entry) => {
+  const full = path.join(DATA_DIR, entry);
+  if (fs.lstatSync(full).isDirectory()) {
+    citySlugs.push(entry);
+  }
+});
+
+// (Re)generate cities.json strictly from directory list so downstream UIs are consistent.
+const citiesJsonPath = path.join(DATA_DIR, 'cities.json');
+citySlugs = Array.from(new Set(citySlugs)).sort();
 fs.writeFileSync(
   citiesJsonPath,
   JSON.stringify(
@@ -74,18 +90,38 @@ const worldMap = new DottedMap({ height: 60, grid: 'vertical' });
 
 let cityCirclesSvg = '';
 
+// Utility: zero-pad edition numbers (e.g., 0 -> "00")
+function padEdition(n) {
+  return String(n).padStart(2, '0');
+}
+
 // Collect city data first to generate city pages and circles
 citySlugs.forEach((slug) => {
-  const cityPath = path.join(DATA_DIR, `${slug}.json`);
-  const cityData = JSON.parse(fs.readFileSync(cityPath, 'utf8'));
+  const cityDir = path.join(DATA_DIR, slug);
+  const editions = fs
+    .readdirSync(cityDir)
+    .filter((f) => f.endsWith('.json') && /^(\d+)\.json$/.test(f))
+    .map((f) => Number(path.basename(f, '.json')))
+    .sort((a, b) => a - b);
+
+  if (editions.length === 0) {
+    console.warn(`⚠️  No edition JSON found in ${cityDir}; skipping city.`);
+    return;
+  }
+
+  const getEditionPath = (ed) => path.join(cityDir, `${ed}.json`);
+
+  // Use edition 0 for world map representation (or the first available)
+  const reprEdition = editions.includes(0) ? 0 : editions[0];
+  const cityDataForPin = JSON.parse(fs.readFileSync(getEditionPath(reprEdition), 'utf8'));
 
   // Determine representative coordinates for the city
   let cityLat, cityLon;
-  if (typeof cityData.city?.latitude === 'number' && typeof cityData.city?.longitude === 'number') {
-    cityLat = cityData.city.latitude;
-    cityLon = cityData.city.longitude;
+  if (typeof cityDataForPin.city?.latitude === 'number' && typeof cityDataForPin.city?.longitude === 'number') {
+    cityLat = cityDataForPin.city.latitude;
+    cityLon = cityDataForPin.city.longitude;
   } else {
-    const coords = cityData.places.filter((p) => typeof p.latitude === 'number' && typeof p.longitude === 'number');
+    const coords = cityDataForPin.places.filter((p) => typeof p.latitude === 'number' && typeof p.longitude === 'number');
     if (coords.length) {
       cityLat = coords.reduce((sum, p) => sum + p.latitude, 0) / coords.length;
       cityLon = coords.reduce((sum, p) => sum + p.longitude, 0) / coords.length;
@@ -94,14 +130,37 @@ citySlugs.forEach((slug) => {
 
   if (typeof cityLat === 'number' && typeof cityLon === 'number') {
     const pin = worldMap.getPin({ lat: cityLat, lng: cityLon });
-    const cityNameRaw = cityData.city?.name || slug;
+    const cityNameRaw = cityDataForPin.city?.name || slug;
     const cityNameEsc = cityNameRaw.replace(/"/g, '&quot;');
-    cityCirclesSvg += `\n  <a xlink:href="${slug}.html" target="_self"><g class="city-pin" data-label="${cityNameEsc}"><circle cx="${pin.x}" cy="${pin.y}" r="0.6" fill="#c8a882" stroke="#8b7355" stroke-width="0.1" /><text class="city-label" x="${pin.x}" y="${pin.y - 1.2}" text-anchor="middle">${cityNameRaw}</text></g></a>`;
+    const latestEdition = editions[editions.length - 1];
+    cityCirclesSvg += `\n  <a xlink:href="${slug}-edition-${padEdition(latestEdition)}.html" target="_self"><g class="city-pin" data-label="${cityNameEsc}"><circle cx="${pin.x}" cy="${pin.y}" r="0.6" fill="#c8a882" stroke="#8b7355" stroke-width="0.1" /><text class="city-label" x="${pin.x}" y="${pin.y - 1.2}" text-anchor="middle">${cityNameRaw}</text></g></a>`;
   }
 
-  // Build city page immediately
-  const cityHtml = buildCityPage(cityData);
-  fs.writeFileSync(path.join(DIST_DIR, `${slug}.html`), cityHtml);
+  // Build each edition page
+  editions.forEach((edNum) => {
+    const data = JSON.parse(fs.readFileSync(getEditionPath(edNum), 'utf8'));
+    const edHtml = buildCityPage(data, slug, edNum);
+    const edFileName = `${slug}-edition-${padEdition(edNum)}.html`;
+    fs.writeFileSync(path.join(DIST_DIR, edFileName), edHtml);
+
+    // No alias page; edition-specific only.
+  });
+
+  // Build edition selection page
+  const cityName = cityDataForPin.city?.name || slug;
+  const editionLinksHtml = editions
+    .map((ed) => {
+      const pad = padEdition(ed);
+      return `<a class="edition-link" href="${slug}-edition-${pad}.html">edition: ${pad}</a>`;
+    })
+    .join('\n');
+
+  const editionsHtmlPage = simpleRender(editionsTemplate, {
+    city_name: cityName,
+    city_slug: slug,
+    edition_links_html: editionLinksHtml,
+  });
+  fs.writeFileSync(path.join(DIST_DIR, `${slug}-editions.html`), editionsHtmlPage);
 });
 
 // Base grid SVG
@@ -124,7 +183,7 @@ fs.writeFileSync(path.join(DIST_DIR, 'index.html'), indexHtml);
 console.log('Build complete – pages written to dist/.');
 
 // ---------------- city page builder -------------
-function buildCityPage(data) {
+function buildCityPage(data, slug, editionNum) {
   // Compute relative positions for markers based on bounding box of all places
   const minLat = Math.min(...data.places.map((p) => p.latitude));
   const maxLat = Math.max(...data.places.map((p) => p.latitude));
@@ -230,8 +289,18 @@ function buildCityPage(data) {
     })
     .join('\n');
 
-  const legendHtml = Object.entries(data.legend)
-    .map(([key, desc]) => `${desc}<br>`)
+  // ---- legend ------------------------------------------------------------
+  const MARKER_ORDER = ['dot', 'square', 'line', 'ring', 'cross', 'text'];
+  const usedTypes = new Set(data.places.map((p) => p.marker));
+  const legendHtml = MARKER_ORDER
+    .filter((type) => usedTypes.has(type) && data.legend[type])
+    .map((type) => {
+      const desc = data.legend[type];
+      const icon = type === 'text'
+        ? `<span class="marker marker-text legend-icon">T</span>`
+        : `<span class="marker marker-${type} legend-icon"></span>`;
+      return `<div class="legend-item">${icon}<span>${desc}</span></div>`;
+    })
     .join('');
 
   const page = simpleRender(cityTemplate, {
@@ -245,6 +314,8 @@ function buildCityPage(data) {
     legend_html: legendHtml,
     place_cards_html: placeCardsHtml,
     fragment_cards_html: fragmentCardsHtml,
+    edition_padded: padEdition(editionNum),
+    edition_select_url: `${slug}-editions.html`,
   });
   return page;
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{city_name}} · Editions · Unflattened</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #f4f1ec;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    a.back {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #666;
+    }
+    a.back:hover { color: #2a2a2a; }
+
+    h1 {
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      margin-bottom: 2rem;
+    }
+
+    .edition-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 260px;
+    }
+
+    .edition-link {
+      border: 1px solid #2a2a2a;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      color: #2a2a2a;
+      text-align: center;
+      border-radius: 6px;
+      transition: all 0.25s;
+    }
+    .edition-link:hover {
+      background: #2a2a2a;
+      color: #f4f1ec;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back">← other cities</a>
+  <h1>{{city_name}}</h1>
+  <div class="edition-list">
+    {{edition_links_html}}
+  </div>
+</body>
+</html> 
